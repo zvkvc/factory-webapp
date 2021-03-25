@@ -1,4 +1,4 @@
-package it.engineering.web.servlet;
+package it.engineering.web.servlets;
 
 import java.io.IOException;
 
@@ -44,7 +44,7 @@ public class AuthServlet extends HttpServlet {
 		if (userFound) {
 			req.getRequestDispatcher("/main.jsp").forward(req, resp);
 		} else {
-			req.getRequestDispatcher("index.jsp").forward(req, resp);
+			req.getRequestDispatcher("/index.jsp").forward(req, resp);
 		}
 
 	}

@@ -8,27 +8,34 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
 import it.engineering.web.model.User;
+import it.engineering.web.repository.CityRepository;
 import it.engineering.web.repository.UserRepository;
 
 @WebListener("Configuration")
 public class ContextListener implements ServletContextListener {
+	
+	
+	private UserRepository userRepository;
 
-	public ContextListener() {
-		System.out.println("====== Constructor: ContextListener =====");
-	}
 
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
+		CityRepository cityRepository = new CityRepository();
+		
+		
 		User user1 = new User("Petar","Petrovic","pera123","petarp@gmail.com");
 		User user2 = new User("Marko","Markovic","mare123","markom@gmail.com");
 		
+		// starting users for testing
 		List<User> users = new ArrayList<>();
 		users.add(user1);
 		users.add(user2);
-		UserRepository userRepository = new UserRepository(users);
+		this.userRepository = new UserRepository(users);
 		
 		
+		//add repos to servlet context
 		sce.getServletContext().setAttribute("userRepository", userRepository);
+		sce.getServletContext().setAttribute("cityRepository", cityRepository);
 	}
 
 	@Override

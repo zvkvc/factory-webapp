@@ -14,13 +14,15 @@
 <body>
 
 	<header>
-		<h2>Dobrodosli ${sessionScope.name.getFirstName()}!</h2>
+		<h2>Dobrodosli ${request.getSession().getAttriute("user").firstName}!</h2>
 	</header>
 	
 
-	<div>
-		
-	</div>
+	<main>
+		<a href="/factory-webapp/city">Go to City repository</a>
+		<a href="${pageContext.request.contextPath}/manufacturer">Go to Manufacturer repository</a>
+		<a href="${pageContext.request.contextPath}/product">Go to Product repository</a>
+	</main>
 
 </body>
 </html>

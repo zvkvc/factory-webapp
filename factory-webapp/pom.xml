@@ -53,7 +53,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>servlet-introduction</finalName>
+		<finalName>factory-webapp</finalName>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
 				defaults (may be moved to parent pom) -->
 			<plugins>
