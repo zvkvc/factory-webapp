@@ -19,7 +19,7 @@
 <body>
 
 	<header>
-		<h2>Dobrodosli ${requestScope.user.getFirstName()}!</h2>
+		<h2>Dobrodosli ${requestScope.user.firstName}!</h2>
 	</header>
 	
 

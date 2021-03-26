@@ -35,11 +35,13 @@ public class AddCityServlet extends HttpServlet {
 		City newCity = new City(cityName, postalCode);
 		// add new city to the cityRepository
 		cityRepository.getCities().add(newCity);
+		
+		
 		// update context attribute
 		req.getServletContext().setAttribute("cityRepository", cityRepository);
+		req.setAttribute("message-city-added", "City successfuly added!");
 		
 		// redirect to confirmation page or main page
-		req.setAttribute("message-city-added", "City successfuly added!");
 		req.getRequestDispatcher("/WEB-INF/pages/city.jsp").forward(req, resp);
 
 

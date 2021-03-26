@@ -55,7 +55,7 @@ header {
 		
 		<div id="modify-city">
 			<h3>Change city name</h3>
-			<form name="form" method="post" action="city/add-city">
+			<form name="form" method="post" action="city/modify-city">
 				<label for="oldName">Previous name</label> 
 				
 				<input type="text" id="oldName"
@@ -64,7 +64,7 @@ header {
 				<label for="newName">New name</label> 
 				
 				<input type="text" id="newName"
-					name="oldName" placeholder="Enter previous name" /> 
+					name="oldName" placeholder="Enter new name" /> 
 				
 					
 				<input type="submit"
