@@ -26,7 +26,7 @@ header {
 	<main>
 		<div id="new-city">
 			<h3>Add a new city</h3>
-			<form name="form" method="post" action="city/add-city">
+			<form name="form" method="post" action="${pageContext.request.contextPath}/add-city">
 				<label for="name">City name</label> 
 				
 				<input type="text" id="name"
@@ -46,7 +46,7 @@ header {
 		<br>
 
 		<div id="show-cities">
-			<a href="city/show-cities">
+			<a href="${pageContext.request.contextPath}/show-cities">
 			Show all cities
 				</a>
 		</div>
@@ -55,7 +55,7 @@ header {
 		
 		<div id="modify-city">
 			<h3>Change city name</h3>
-			<form name="form" method="post" action="city/modify-city">
+			<form name="form" method="post" action="${pageContext.request.contextPath}/modify-city">
 				<label for="oldName">Previous name</label> 
 				
 				<input type="text" id="oldName"

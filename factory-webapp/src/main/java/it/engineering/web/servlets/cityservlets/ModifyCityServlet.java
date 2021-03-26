@@ -11,10 +11,16 @@ import javax.servlet.http.HttpServletResponse;
 import it.engineering.web.model.City;
 import it.engineering.web.repository.CityRepository;
 
-@WebServlet("/city/modify-city")
+@WebServlet("/modify-city")
 public class ModifyCityServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 8636873011504814897L;
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		super.doGet(req, resp);
+	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -36,6 +42,9 @@ public class ModifyCityServlet extends HttpServlet {
 		
 		// update context attribute
 		req.getServletContext().setAttribute("cityRepository", cityRepository);
+		
+		// redirect to confirmation page or main page
+		req.getRequestDispatcher("/WEB-INF/pages/city.jsp").forward(req, resp);
 
 	}	
 }

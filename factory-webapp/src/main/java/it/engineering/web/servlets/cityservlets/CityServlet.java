@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 // maps to city.jsp
-@WebServlet(urlPatterns = {"/city"})
+@WebServlet("/city")
 public class CityServlet extends HttpServlet {
 
 	private static final long serialVersionUID = -3225294208665957656L;

@@ -15,7 +15,7 @@ import it.engineering.web.repository.CityRepository;
 /**
  * Servlet implementation class ShowCitiesServlet
  */
-@WebServlet(urlPatterns={"/city/show-cities"})
+@WebServlet("/show-cities")
 public class ShowCitiesServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
