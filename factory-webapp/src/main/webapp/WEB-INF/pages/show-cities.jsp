@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
+    
+<%@page isELIgnored="false"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -10,6 +12,9 @@
 <body>
 	<header>
 		<h4>Show cities in the repository</h4>
+		<c:out value="${cities}" />
+		
+		
 	</header>
 	<main>
 		<div>
@@ -22,12 +27,12 @@
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach items="${requestScope.cities}" var="city"
+					<c:forEach items="${listAllCities}" var="city"
 						varStatus="loop">
 						<tr>
 							<td>${loop.index}</td>
-							<td>${city.getFirstName()}</td>
-							<td>${city.getPostalCode()}</td>
+							<td>${city.name}</td>
+							<td>${city.postalCode}</td>
 						</tr>
 					</c:forEach>
 

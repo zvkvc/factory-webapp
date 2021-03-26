@@ -28,7 +28,7 @@ public class ShowCitiesServlet extends HttpServlet {
     	List<City> cities = cityRepo.getCities();
 
     	
-    	req.setAttribute("cities", cities);
+    	req.setAttribute("listAllCities", cities);
     	req.getRequestDispatcher("/WEB-INF/pages/show-cities.jsp").forward(req, resp);
     }
 		

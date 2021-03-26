@@ -12,7 +12,7 @@ import it.engineering.web.model.City;
 import it.engineering.web.repository.CityRepository;
 
 
-@WebServlet(urlPatterns={"/city/add-city"})
+@WebServlet("/city/add-city")
 public class AddCityServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 3457797189691372240L;

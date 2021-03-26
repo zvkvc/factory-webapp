@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+<%@page isELIgnored="false"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -37,9 +41,6 @@ header {
 
 			</form>
 
-			<c:if test="${!empty message-city-added}">
-				<h3>${message-city-added}</h3>
-			</c:if>
 		</div>
 		
 		<br>
@@ -53,8 +54,23 @@ header {
 		<br>
 		
 		<div id="modify-city">
-			
-		
+			<h3>Change city name</h3>
+			<form name="form" method="post" action="city/add-city">
+				<label for="oldName">Previous name</label> 
+				
+				<input type="text" id="oldName"
+					name="oldName" placeholder="Enter previous name" /> 
+				
+				<label for="newName">New name</label> 
+				
+				<input type="text" id="newName"
+					name="oldName" placeholder="Enter previous name" /> 
+				
+					
+				<input type="submit"
+					value="Change" name="Change" />
+
+			</form>
 		</div>
 
 		<div id="show-city">

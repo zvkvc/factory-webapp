@@ -4,11 +4,10 @@ public class City {
 	
 	private String name;
 	private String postalCode;
-	
-	public City(String name, String postalNumber) {
+	public City(String name, String postalCode) {
 		super();
 		this.name = name;
-		this.postalCode = postalNumber;
+		this.postalCode = postalCode;
 	}
 	
 	public String getName() {
@@ -17,17 +16,18 @@ public class City {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getPostalNumber() {
+	public String getPostalCode() {
 		return postalCode;
 	}
-	public void setPostalNumber(String postalNumber) {
-		this.postalCode = postalNumber;
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
 	}
-	
 	@Override
 	public String toString() {
-		return "City [name=" + name + ", postalNumber=" + postalCode + "]";
+		return "City [name=" + name + ", postalCode=" + postalCode + "]";
 	}
+	
+	
 	
 	
 }
