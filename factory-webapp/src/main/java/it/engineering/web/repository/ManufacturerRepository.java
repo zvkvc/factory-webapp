@@ -14,6 +14,10 @@ public class ManufacturerRepository {
 		this.manufacturers = manufacturers;
 	}
 
+	public ManufacturerRepository() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public List<Manufacturer> getManufacturers() {
 		return manufacturers;
 	}

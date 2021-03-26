@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebListener;
 
 import it.engineering.web.model.User;
 import it.engineering.web.repository.CityRepository;
+import it.engineering.web.repository.ManufacturerRepository;
 import it.engineering.web.repository.UserRepository;
 
 @WebListener("Configuration")
@@ -21,6 +22,7 @@ public class ContextListener implements ServletContextListener {
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
 		CityRepository cityRepository = new CityRepository();
+		ManufacturerRepository manufacturerRepository = new ManufacturerRepository();
 		
 		
 		User user1 = new User("Petar","Petrovic","pera123","petarp@gmail.com");
@@ -33,9 +35,10 @@ public class ContextListener implements ServletContextListener {
 		this.userRepository = new UserRepository(users);
 		
 		
-		//add repos to servlet context
+		//add repos to servlet context - this will emulate persistance for now
 		sce.getServletContext().setAttribute("userRepository", userRepository);
 		sce.getServletContext().setAttribute("cityRepository", cityRepository);
+		sce.getServletContext().setAttribute("manufacturerRepository", manufacturerRepository);
 	}
 
 	@Override
