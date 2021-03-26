@@ -12,9 +12,6 @@
 <body>
 	<header>
 		<h4>Show cities in the repository</h4>
-		<c:out value="${cities}" />
-		
-		
 	</header>
 	<main>
 		<div>

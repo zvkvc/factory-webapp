@@ -34,6 +34,7 @@ public class ModifyCityServlet extends HttpServlet {
 		
 		// find old city based on oldName and rename it
 		for(City city: cityRepository.getCities()) {
+			System.out.println("Current city: "+city.getName());
 			if (city.getName().equals(oldName)) {
 				city.setName(newName);
 				break;

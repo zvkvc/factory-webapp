@@ -40,6 +40,11 @@ header {
 					value="Add" name="Add" />
 
 			</form>
+			<br>
+			<c:if test="${message-city-added!=0}">
+  		 		<c:out value="${message-city-added}" />
+			</c:if>
+			
 
 		</div>
 		
@@ -48,7 +53,7 @@ header {
 		<div id="show-cities">
 			<a href="${pageContext.request.contextPath}/show-cities">
 			Show all cities
-				</a>
+			</a>
 		</div>
 		
 		<br>
@@ -64,7 +69,7 @@ header {
 				<label for="newName">New name</label> 
 				
 				<input type="text" id="newName"
-					name="oldName" placeholder="Enter new name" /> 
+					name="newName" placeholder="Enter new name" /> 
 				
 					
 				<input type="submit"
@@ -72,9 +77,11 @@ header {
 
 			</form>
 		</div>
+		
+		<br>
 
 		<div id="show-city">
-			<a href="${pageContext.request.contextPath}/city?link=show-city">
+			<a href="${pageContext.request.contextPath}/show-city">
 			Show city
 			</a>
 		</div>
