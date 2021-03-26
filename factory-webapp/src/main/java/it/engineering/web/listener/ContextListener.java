@@ -21,14 +21,15 @@ public class ContextListener implements ServletContextListener {
 
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
+		// initialize repos here
 		CityRepository cityRepository = new CityRepository();
 		ManufacturerRepository manufacturerRepository = new ManufacturerRepository();
 		
-		
+		// starting users for testing
 		User user1 = new User("Petar","Petrovic","pera123","petarp@gmail.com");
 		User user2 = new User("Marko","Markovic","mare123","markom@gmail.com");
 		
-		// starting users for testing
+		
 		List<User> users = new ArrayList<>();
 		users.add(user1);
 		users.add(user2);
