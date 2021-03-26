@@ -22,7 +22,7 @@ header {
 	<main>
 		<div id="new-city">
 			<h3>Add a new city</h3>
-			<form name="form" method="post" action="/city/add-city">
+			<form name="form" method="post" action="city/add-city">
 				<label for="name">City name</label> 
 				
 				<input type="text" id="name"
@@ -45,14 +45,17 @@ header {
 		<br>
 
 		<div id="show-cities">
-			<a href="${pageContext.request.contextPath}/city?link=show-cities">
+			<a href="city/show-cities">
 			Show all cities
 				</a>
 		</div>
 		
 		<br>
 		
-		<div id="modify-city"></div>
+		<div id="modify-city">
+			
+		
+		</div>
 
 		<div id="show-city">
 			<a href="${pageContext.request.contextPath}/city?link=show-city">

@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>ShowCitiesServlet</servlet-name>
+  	<display-name>ShowCitiesServlet</display-name>
+  	<description></description>
+  	<servlet-class>it.engineering.web.servlets.cityservlets.ShowCitiesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ShowCitiesServlet</servlet-name>
+  	<url-pattern>/ShowCitiesServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

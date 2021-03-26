@@ -14,14 +14,14 @@
 <body>
 
 	<header>
-		<h2>Dobrodosli ${request.getSession().getAttriute("user").firstName}!</h2>
+		<h2>Dobrodosli ${requestScope.user.getFirstName()}!</h2>
 	</header>
 	
 
 	<main>
-		<a href="/factory-webapp/city">Go to City repository</a>
-		<a href="${pageContext.request.contextPath}/manufacturer">Go to Manufacturer repository</a>
-		<a href="${pageContext.request.contextPath}/product">Go to Product repository</a>
+		<a href="/factory-webapp/city">Go to City repository</a> <br>
+		<a href="/factory-webapp/manufacturer">Go to Manufacturer repository</a> <br>
+		<a href="/factory-webapp/product">Go to Product repository</a> <br>
 	</main>
 
 </body>
